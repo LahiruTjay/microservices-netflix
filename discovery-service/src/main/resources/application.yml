@@ -3,9 +3,9 @@ server:
 
 spring:
  application:
-  name: DISCOVERY-SERVICE
-  
+  name: discovery-service
+
 eureka:
  client:
   register-with-eureka: false
-  fetch-registry: false 
+  fetch-registry: false
