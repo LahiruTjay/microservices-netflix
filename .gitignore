@@ -1,6 +1,5 @@
 HELP.md
 target/
-!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**
 !**/src/test/**
 
@@ -29,11 +28,11 @@ build/
 
 ### VS Code ###
 .vscode/
-/discovery-service/.mvn
-/discovery-service/mvnw
-/discovery-service/mvnw.cmd
-/user-service/*.cmd
-/user-service/mvnw
-/user-service/.mvn/wrapper/MavenWrapperDownloader.java
-/user-service/.mvn/wrapper/maven-wrapper.jar
-/user-service/.mvn/wrapper/maven-wrapper.properties
+**/.mvn
+**/mvnw
+**/mvnw.cmd
+**/*.cmd
+**/mvnw
+**/.mvn/wrapper/MavenWrapperDownloader.java
+**/.mvn/wrapper/maven-wrapper.jar
+**/.mvn/wrapper/maven-wrapper.properties
