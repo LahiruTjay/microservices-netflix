@@ -3,9 +3,15 @@ server:
 
 spring:
  application:
-  name: API-GATEWAY
+  name: api-gateway
   
 eureka:
  client:
   serviceUrl:
    defaultZone: http://localhost:8761/eureka/
+   
+zuul:
+ prefix: /api
+ routes:  user-service: 
+   path: /user-service/**
+   service-id: USER-SERVICE
