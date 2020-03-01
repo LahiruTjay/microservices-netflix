@@ -11,7 +11,6 @@ eureka:
    defaultZone: http://localhost:8761/eureka/
    
 zuul:
- prefix: /api
  routes:  user-service: 
    path: /user-service/**
    service-id: USER-SERVICE
