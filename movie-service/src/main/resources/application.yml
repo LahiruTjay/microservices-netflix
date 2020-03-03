@@ -1,0 +1,29 @@
+server:
+ port: 8900
+
+spring:
+ application:
+  name: movie-service
+  
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8761/eureka/
+   
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
+ endpoint:
+  health:
+   show-details: always
+   show-components: always
+
+info:
+ app:
+  name: movie-service
+  description: Movie service with actuator enabled
+  version: 1.0
+  encoding: UTF-8
+  java.version: 11

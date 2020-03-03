@@ -10,5 +10,10 @@ public class UserController {
 	public String getName() {
 		return "USER-SERVICE";
 	}
+	
+	@GetMapping("/user_movie")
+	public String getRegUser() {
+		return "USER-FROM-MOVIIE";
+	}
 
 }

@@ -21,7 +21,24 @@ public class UserAPI {
 	}
 
 	public String getUserFallback() {
-		return "User-Service";
+		return "User-Service fallback";
+	}
+	
+	@GetMapping("/getMovie")
+	@HystrixCommand(fallbackMethod = "getMovieFallback")
+	public String getMovie( ) {
+		String url = "http://movie-service/movie";
+		return restTemplate.getForObject(url, String.class);
+	}
+	
+	public String getMovieFallback() {
+		return "Movie-Service fallback";
+	}
+	
+	@GetMapping("/getMovieP")
+	public String getMovieForUser( ) {
+		String url = "http://movie-service/movie_user";
+		return restTemplate.getForObject(url, String.class);
 	}
 	
 }

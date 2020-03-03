@@ -21,6 +21,9 @@ management:
    show-components: always
 
 zuul:
- routes:  user-service: 
+ routes:  user-service:
    path: /user-service/**
    service-id: USER-SERVICE
+  movie-service:
+   path: /movie-service/**
+   service-id: MOVIE-SERVICE
